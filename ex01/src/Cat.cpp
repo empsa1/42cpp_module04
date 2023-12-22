@@ -8,6 +8,7 @@ Cat::Cat() {
 
 Cat::~Cat() {
     std::cout << "A Cat has been destroyed, no cats were hurt in this process" << std::endl;
+	delete this->brain;
 }
 
 Cat::Cat(const Cat &src) : Animal(src) {

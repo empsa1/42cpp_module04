@@ -1,6 +1,6 @@
 SRC = src/Brain.cpp src/WrongAnimal.cpp src/WrongCat.cpp src/Animal.cpp src/Dog.cpp src/Cat.cpp src/main.cpp
 OBJ = $(SRC:.cpp=.o)
-CC = g++
+CC = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 

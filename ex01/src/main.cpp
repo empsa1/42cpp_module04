@@ -24,7 +24,7 @@ void check_leaks() {
 }
 
 int main() {
-	std::atexit(&check_leaks);
+	//std::atexit(&check_leaks);
 
 	std::cout << std::boolalpha;
 
@@ -32,7 +32,7 @@ int main() {
 	for (int i = 0; i < ANIMALS_HALF; i++) {
 		animals[i] = new Dog();
 		std::cout << "----------" << std::endl;
-	}
+	}   
 	for (int i = 0; i < ANIMALS_HALF; i++) {
 		animals[i + ANIMALS_HALF] = new Cat();
 		std::cout << "----------" << std::endl;

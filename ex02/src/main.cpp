@@ -24,7 +24,7 @@ void check_leaks() {
 }
 
 int main() {
-	std::atexit(&check_leaks);
+	//std::atexit(&check_leaks);
 
 	std::cout << std::boolalpha;
 

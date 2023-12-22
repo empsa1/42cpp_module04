@@ -8,6 +8,7 @@ Dog::Dog() {
 
 Dog::~Dog() {
     std::cout << "A dog has been destroyed, no dogs were hurt in this process" << std::endl;
+	delete this->brain;
 }
 
 Dog::Dog(const Dog &src) : Animal(src) {

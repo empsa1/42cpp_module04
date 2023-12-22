@@ -4,14 +4,11 @@
 class Cat : public Animal {
 public:
     Cat();
-
-    ~Cat();
-
-    void makeSound() const;
-
-private:
+    virtual ~Cat();
     Cat(const Cat& other);
     Cat& operator=(const Cat& assign);
+
+    void makeSound() const;
 };
 
 #endif

@@ -4,14 +4,11 @@
 class Dog : public Animal {
  public:
     Dog();
-
-    ~Dog();
-
-    void makeSound() const;
-
-    private:
+    virtual ~Dog();
     Dog(const Dog& other);
     Dog& operator=(const Dog& assign);
+
+    void makeSound() const;
 };
 
 #endif

@@ -1,10 +1,10 @@
-SRC = src/Fixed.cpp src/main.cpp
+SRC = src/Dog.cpp src/Cat.cpp src/Animal.cpp src/main.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = g++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = FixedPoint
+NAME = AnimalFarm
 
 all: $(NAME)
 

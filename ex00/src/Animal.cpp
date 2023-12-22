@@ -1,19 +1,28 @@
 #include "../includes/Animal.hpp"
 
-Animal::Animal() : type("not defined") {
-    std::cout << "Creating an Animal of type: " << this->type << std::endl;
+Animal::Animal() : type("Unknown") {
+	std::cout << "Default Animal constructor called" << std::endl;
 }
 
-Animal::Animal(const Animal &other) : type(other.type) {
-     std::cout << "Creating an Animal by copying from another of type: " << type << std::endl;
+Animal::Animal(const Animal &src) : type(src.type) {
+	std::cout << "Animal copy constructor called" << std::endl;
 }
 
-Animal::virtual ~Animal() {
-    std::cout << "Destroying an Animal of type: " << type << std::endl;
+Animal &Animal::operator=(Animal const &rhs) {
+	if (this == &rhs)
+		return *this;
+	this->type = rhs.type;
+	return *this;
 }
 
-Animal& Animal::operator=(const Animal& other) {
-    type = other.type;
-    std::cout << "Assigning an Animal of type: " << type << std::endl;
-    return *this;
+Animal::~Animal() {
+	std::cout << "Animal destructor called" << std::endl;
+}
+
+void Animal::makeSound() const {
+	std::cout << "Its mute!" << std::endl;
+}
+
+std::string const &Animal::getType() const {
+	return this->type;
 }

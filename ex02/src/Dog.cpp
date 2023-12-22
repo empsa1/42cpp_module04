@@ -10,7 +10,7 @@ Dog::~Dog() {
     std::cout << "A dog has been destroyed, no dogs were hurt in this process" << std::endl;
 }
 
-Dog::Dog(const Dog &src) : Animal(src) {
+Dog::Dog(const Dog &src) : AAnimal(src) {
 	std::cout << "Dog copy constructor called" << std::endl;
 	this->brain = new Brain(*src.brain);
 }
@@ -18,7 +18,7 @@ Dog::Dog(const Dog &src) : Animal(src) {
 Dog &Dog::operator=(Dog const &rhs) {
 	if (this == &rhs)
 		return *this;
-	Animal::operator=(rhs);
+	AAnimal::operator=(rhs);
 	delete this->brain;
 	this->brain = new Brain(*rhs.brain);
 	return *this;

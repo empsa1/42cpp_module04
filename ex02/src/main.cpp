@@ -1,5 +1,4 @@
 #include "../includes/AAnimal.hpp"
-#include "../includes/Animal.hpp"
 #include "../includes/Dog.hpp"
 #include "../includes/Cat.hpp"
 #include "../includes/WrongAnimal.hpp"
@@ -29,8 +28,8 @@ int main() {
 
 	std::cout << std::boolalpha;
 
-	// AAnimal animal; // NOTE: Will not work with this line in
-	// AAnimal *animal = new AAnimal(); // NOTE: Will not work with this line in
+	//AAnimal animal; // NOTE: Will not work with this line in
+	//AAnimal *animal = new AAnimal(); // NOTE: Will not work with this line in
 
 	const AAnimal* animals[ANIMALS_HALF * 2];
 	for (int i = 0; i < ANIMALS_HALF; i++) {
